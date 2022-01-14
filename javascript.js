@@ -15,8 +15,10 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "Rock";
+// const playerSelection = "Rock";
+let playerSelection = window.prompt("Please choose Rock, Paper, or Scissors");
 const computerSelection = computerPlay();
 console.log("You've chosen " + playerSelection);
 console.log("The computer has chosen " + computerSelection);
 console.log(playRound(playerSelection, computerSelection));
+
