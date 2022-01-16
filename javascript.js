@@ -1,9 +1,7 @@
-
 function computerPlay() {
     var answer = ["Rock", "Paper", "Scissors"];
     return randomAnswer = answer[Math.floor(Math.random() * answer.length)];
 }
-
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
@@ -20,6 +18,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for (let i = 1; i <= 5; i++) {
         let playerSelection = window.prompt("Please choose Rock, Paper, or Scissors");
+        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
         const computerSelection = computerPlay();
         console.log("Round " + i);
         console.log("You've chosen " + playerSelection);
